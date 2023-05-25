@@ -1,0 +1,80 @@
+body {
+    padding: 20px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+
+  .to-top{
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #1f1f1f;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+
+  .to-top.active {
+    bottom:32px;
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .img-gallery{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+  }
+
+  .img-gallery img{
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .img-gallery img:hover{
+    transform: scale(0.95) rotate(-3deg);
+    border-radius: 5px;
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+  }
+
+  .full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+
+  .full-img img{
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
